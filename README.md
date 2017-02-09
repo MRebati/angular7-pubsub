@@ -57,7 +57,7 @@ export class OverlayComponent implements OnInit, OnDestroy {
 }
 ```
 
-#### PubSubService.$sub(event: stirng): <Observable<number>>
+#### PubSubService.$sub(event: stirng): Observable<number>
 
 Subscribe to channel. 
 
