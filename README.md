@@ -40,7 +40,8 @@ bootstrap: [RootComponent]
 declare class PubSubService{
 	private events: Object;
 	$pub(event: string, eventObject?: any): void;
-	$sub(event: string): <Observable<number>>;
+	$sub(event: string): <Observable<any>>;
+	$sub(event: string, callback: (value: any) => void, error?: (error: any) => void, complete?: () => void): Subscription;
 }
 ```
 
@@ -59,7 +60,7 @@ export class OverlayComponent implements OnInit, OnDestroy {
 }
 ```
 
-#### PubSubService.$sub(event: stirng): Observable<number>
+#### PubSubService.$sub(event: stirng): Observable<any>
 
 Subscribe to channel. 
 
@@ -71,12 +72,19 @@ export class NavigationComponent implements OnInit, OnDestroy {
 	constructor(private pubsub: EventDispatcherService) { }
 
 	ngOnInit() {
+		// usage of $sub(event: string): <Observable<any>>;
 		this.closeSidenavSub = this.pubsub.$sub('pleaseCloseSidenav').subscribe((from) => {
+			from ? this.sidenavOpened = false : void 0
+		});
+
+		// usage of $sub(event: string, callback: (value: any) => void, error?: (error: any) => void, complete?: () => void): Subscription;
+		this.openSidenavSub = this.pubsub.$sub('pleaseOpenSidenav', (from) => {
 			from ? this.sidenavOpened = false : void 0
 		});
 	}
 	ngOnDestroy() {
 		this.closeSidenavSub.unsubscribe();
+		this.openSidenavSub.unsubscribe();
 	}
 ```
 
