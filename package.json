@@ -1,0 +1,23 @@
+{
+	"name": "angular2-pubsub",
+	"version": "1.0.0",
+	"description": "Pub/Sub service for Angular 2",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/sqlProvider/angular2-pubsub.git"
+	},
+	"keywords": [
+		"Angular2",
+		"pubsub",
+		"angular2-service"
+	],
+	"author": {
+		"name": "Semih KEŞKEK",
+		"email": "keskeksmh@gmail.com"
+	},
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/sqlProvider/angular2-pubsub/issues"
+	},
+	"homepage": "https://github.com/sqlProvider/angular2-pubsub#readme"
+}

@@ -1,0 +1,22 @@
+{
+  "name": "angular2-pubsub",
+  "description": "Pub/Sub service for Angular 2",
+  "main": "",
+  "authors": [
+    "Semih KEŞKEK"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "Angular2",
+    "pubsub",
+    "angular2-service"
+  ],
+  "homepage": "https://github.com/sqlProvider/angular2-pubsub",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
