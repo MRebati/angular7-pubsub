@@ -40,8 +40,11 @@ bootstrap: [RootComponent]
 declare class PubSubService{
 	private events: Object;
 	$pub(event: string, eventObject?: any): void;
-	$sub(event: string): <Observable<any>>;
-	$sub(event: string, callback: (value: any) => void, error?: (error: any) => void, complete?: () => void): Subscription;
+	$sub(): undefined;
+	$sub(event: string): Observable<any>;
+	$sub(event: string, callback: (value: any) => void): Subscription;
+	$sub(event: string, callback: (value: any) => void, error: (error: any) => void): Subscription;
+	$sub(event: string, callback: (value: any) => void, error: (error: any) => void, complete: () => void): Subscription;
 }
 ```
 
