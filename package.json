@@ -1,10 +1,14 @@
 {
 	"name": "angular2-pubsub",
-	"version": "1.1.1",
+	"version": "1.1.2",
 	"description": "Pub/Sub service for Angular 2",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/sqlProvider/angular2-pubsub.git"
+	},
+	"scripts": {
+		"test": "",
+		"build": ""
 	},
 	"keywords": [
 		"Angular2",
