@@ -3,50 +3,53 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { Observable } from 'rxjs/Observable';
 import { Subscription } from 'rxjs/Subscription';
 
+const ServiceName: string = "PubSub Service";
+
 @Injectable()
-export class PubSubService implements IPubSubService{
-	private events = {};	
+export class PubSubService implements IPubSubService {
+	private events = {};
 
 	constructor() { }
 
 	$sub(event: string): Observable<any>;
-	$sub(event: string, callback: (value: any) => void): Subscription;	
+	$sub(event: string, callback: (value: any) => void): Subscription;
 	$sub(event: string, callback: (value: any) => void, error: (error: any) => void): Subscription;
 	$sub(event: string, callback: (value: any) => void, error: (error: any) => void, complete: () => void): Subscription;
-	$sub(event: string, callback?: (value: any) => void, error?: (error: any) => void, complete?: () => void){
-		if (event == undefined) { 
-			console.warn('[PubSub Service] => Subscription method must get event name.');
-			return;
+	$sub(event: string, callback?: (value: any) => void, error?: (error: any) => void, complete?: () => void) {
+		if (event == undefined) {
+			throw new Error(`[${ServiceName}] => Subscription method must get event name.`);
 		};
 
-		if (this.events[event] === undefined)
+		if (this.events[event] === undefined) {
 			this.events[event] = new BehaviorSubject<any>(0);
-		
-		if (!callback || typeof callback !== 'function')
+		}
+
+		if (!callback || typeof callback !== 'function') {
 			return this.events[event].asObservable();
-		else	
+		}
+		else {
 			return this.events[event].asObservable().subscribe(callback, error, complete);
+		}
 	}
+
 	$pub(event: string, eventObject?: any) {
 		if (event == undefined) {
-			console.warn('[PubSub Service] => Publish method must get event name.');
-			return;
+			throw new Error(`[${ServiceName}] => Publish method must get event name.`);
 		}
 		else if (this.events[event] === undefined) {
-			console.warn('[PubSub Service] => No recorded events found for "' + event + '".');
-			return;
+			throw new Error(`[${ServiceName}] => No recorded events found for ${event}.`);
 		}
-		
-		this.events[event].next(eventObject);		
-	}	
+
+		this.events[event].next(eventObject);
+	}
 }
 
-interface IPubSubService{
+interface IPubSubService {
 	$pub(event: string, eventObject?: any);
 	$sub: I$sub;
 }
 
-interface I$sub{
+interface I$sub {
 	(event: string): Observable<any>;
 	(event: string, callback: (value: any) => void): Subscription;
 	(event: string, callback: (value: any) => void, error: (error: any) => void): Subscription;
