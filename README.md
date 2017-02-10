@@ -3,7 +3,9 @@
 A simple publisher/subscriber service. 
 
 ## Usage
- - Import service in your codes.
+ - Import service in your codes or download via npm or bower.
+
+`npm i --save angular2-pubsub` | `bower i --save angular2-pubsub`
 
  - Add service to App Module providers.
 ```typescript
