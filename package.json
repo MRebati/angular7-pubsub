@@ -2,13 +2,20 @@
   "name": "angular2-pubsub",
   "version": "1.1.2",
   "description": "Pub/Sub service for Angular 2",
+  "main": "./umd/angular2-pubsub.js",
+  "module": "./esm/src/index.js",
+  "typings": "./esm/src/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sqlProvider/angular2-pubsub.git"
   },
   "scripts": {
-    "test": "",
-    "build": ""
+    "test": "karma start",
+    "clean": "rm -rf dist",
+    "build-umd": "webpack --config webpack.config.umd.js",
+    "build-angular": "ngc -p tsconfig-ngc.json",
+    "copy-package-info": "cp ./package.json ./dist/package.json && cp ./bower.json ./dist/bower.json",
+    "build": "npm run clean && npm run build-umd && npm run build-angular && npm run copy-package-info"
   },
   "keywords": [
     "Angular2",
@@ -19,6 +26,13 @@
     "name": "Semih KEŞKEK",
     "email": "keskeksmh@gmail.com"
   },
+  "contributors": [
+    {
+      "name": "Mert Susur",
+      "email": "mail@mertsusur.com",
+      "url": "http://github.com/msusur"
+    }
+  ],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/sqlProvider/angular2-pubsub/issues"
@@ -37,6 +51,7 @@
   },
   "devDependencies": {
     "@angular/compiler-cli": "^2.4.7",
+    "@angular/platform-browser-dynamic": "^2.4.7",
     "@types/es6-shim": "^0.31.32",
     "@types/jasmine": "^2.5.41",
     "@types/node": "^7.0.5",
@@ -46,6 +61,7 @@
     "codelyzer": "^2.0.0",
     "commitizen": "^2.9.5",
     "compression-webpack-plugin": "^0.3.2",
+    "extract-text-webpack-plugin": "^1.0.1",
     "imports-loader": "^0.7.0",
     "karma": "^1.4.1",
     "karma-chrome-launcher": "^2.0.0",
@@ -68,7 +84,7 @@
     "tslint": "^4.0.2",
     "tslint-loader": "^3.3.0",
     "typedoc": "^0.5.0",
-    "typescript": "~2.0.3",
+    "typescript": "^2.1.6",
     "validate-commit-msg": "^2.8.0",
     "webpack": "^1.13.0",
     "webpack-dev-server": "^1.16.1",

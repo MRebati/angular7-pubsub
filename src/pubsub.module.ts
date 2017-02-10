@@ -1,4 +1,4 @@
-import { PubSubService } from 'angular2-pubsub.service';
+import { PubSubService } from './angular2-pubsub.service';
 import { ModuleWithProviders, NgModule } from '@angular/core';
 
 @NgModule({
@@ -7,8 +7,7 @@ import { ModuleWithProviders, NgModule } from '@angular/core';
   ],
   exports: [
     PubSubService
-  ],
-  entryComponent: []
+  ]
 })
 export class PubSubModule {
   public static forRoot(): ModuleWithProviders {

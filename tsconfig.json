@@ -1,6 +1,20 @@
 {
-    "compilerOptions": {
-        "target": "ES6",
-		"experimentalDecorators": true
+  "compilerOptions": {
+    "target": "ES5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "removeComments": false,
+    "noImplicitAny": false,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "paths": {
+      "tempo-common": [
+        "./src/index"
+      ]
     }
+  },
+  "compileOnSave": false
 }

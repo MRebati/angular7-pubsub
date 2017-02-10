@@ -1,10 +1,11 @@
 {
   "name": "angular2-pubsub",
   "description": "Pub/Sub service for Angular 2",
-  "version": "1.1.1",
-  "main": "",
+  "version": "1.1.2",
+  "main": "./umd/angular2-pubsub.js",
   "authors": [
-    "Semih KEŞKEK"
+    "Semih KEŞKEK",
+    "Mert SUSUR"
   ],
   "license": "ISC",
   "keywords": [
