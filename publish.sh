@@ -3,10 +3,6 @@
 # Build project
 npm run build
 
-DESTDIR=./dist
-cd DESTDIR
-
 echo "====== PUBLISHING: angular2-pubusb ====="
-
-npm publish angular2-pubsub --access public
+npm publish ./dist --access public
 echo "====== PUBLISHED: angular2-pubusb ====="
