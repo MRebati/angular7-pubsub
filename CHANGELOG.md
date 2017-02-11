@@ -1,3 +1,5 @@
+## v1.1.2
+Added unit tests for the service and project restructure updated to use the benefits of webpack and bundling.
 
 ## v1.1.1
 Recovery fix and added interfaces.
@@ -33,7 +35,7 @@ declare class PubSubService{
 ```
 -------
 ## v1.0.0
-A simple publisher/subscriber service. 
+A simple publisher/subscriber service.
 
 ### Class Overview
 ```typescript

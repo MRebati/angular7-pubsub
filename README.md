@@ -2,16 +2,21 @@
 
 A simple publisher/subscriber service. 
 
+## Contributers
+
+- [Semih KEŞKEK](http://github.com/sqlProvider)
+- [Mert SUSUR](http://github.com/msusur)
+
 ## Usage
  - Import service in your codes or download via npm or bower.
 
 `npm i --save angular2-pubsub` | `bower i --save angular2-pubsub`
 
- - Add service to App Module providers.
+ - Add module bundle to imports in your application.
 ```typescript
 ...
 
-import { EventDispatcherService } from './path/to/service/angular2-pubsub.service'; // <= HERE
+import { PubSubModule } from 'angular2-pubsub'; // <= HERE
 
 @NgModule({
 declarations: [
@@ -22,9 +27,10 @@ declarations: [
 imports: [
 	BrowserModule,
 	FormsModule,
-	HttpModule
+	HttpModule,
+	PubSubModule.forRoot() // <= AND HERE
 ],
-providers: [EventDispatcherService], // <= AND HERE
+providers: [], 
 bootstrap: [RootComponent]
 })
 
@@ -37,7 +43,7 @@ bootstrap: [RootComponent]
 #### Class Overview
 
 ```typescript
-declare class PubSubService{
+declare class PubSubService {
 	private events: Object;
 	$pub(event: string, eventObject?: any): void;
 	$sub(): undefined;
@@ -100,3 +106,14 @@ this.closeSidenavSub = this.pubsub.$sub('pleaseCloseSidenav').subscribe((from) =
 
 // => 0 
 ```
+
+## Build the source
+
+Follow the steps to run the tests and build the source code.
+```sh
+npm install
+npm test
+npm run build
+```
+Commands above will generate the ready to use bundles under the `./dist` folder.
+
