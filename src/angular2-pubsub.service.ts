@@ -11,6 +11,10 @@ export class PubSubService implements IPubSubService {
 
 	constructor() { }
 
+	public $sub(event: string): Observable<any>;
+	public $sub(event: string, callback: (value: any) => void): Subscription;	
+	public $sub(event: string, callback: (value: any) => void, error: (error: any) => void): Subscription;
+	public $sub(event: string, callback: (value: any) => void, error: (error: any) => void, complete: () => void): Subscription;
 	public $sub(event: string, callback?: (value: any) => void, error?: (error: any) => void, complete?: () => void) {
 		if (!event) {
 			throw new Error(`[${ServiceName}] => Subscription method must get event name.`);
@@ -40,5 +44,15 @@ export class PubSubService implements IPubSubService {
 
 export interface IPubSubService {
 	$pub(event: string, eventObject?: any);
-	$sub(event: string, callback?: (value: any) => void, error?: (error: any) => void, complete?: () => void);
+	$sub(event: string): Observable<any>;
+	$sub(event: string, callback: (value: any) => void): Subscription;
+	$sub(event: string, callback: (value: any) => void, error: (error: any) => void): Subscription;
+	$sub(event: string, callback: (value: any) => void, error: (error: any) => void, complete: () => void): Subscription;
+}
+
+interface I$sub{
+	(event: string): Observable<any>;
+	(event: string, callback: (value: any) => void): Subscription;
+	(event: string, callback: (value: any) => void, error: (error: any) => void): Subscription;
+	(event: string, callback: (value: any) => void, error: (error: any) => void, complete: () => void): Subscription;
 }
