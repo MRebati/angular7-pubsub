@@ -15,7 +15,8 @@
     "build-umd": "webpack --config webpack.config.umd.js",
     "build-angular": "ngc -p tsconfig-ngc.json",
     "copy-package-info": "cp ./package.json ./dist/package.json && cp ./bower.json ./dist/bower.json",
-    "build": "npm run clean && npm run build-umd && npm run build-angular && npm run copy-package-info"
+    "build": "npm run clean && npm run build-umd && npm run build-angular && npm run copy-package-info",
+    "publish": "npm run build && ./publish.sh"
   },
   "keywords": [
     "Angular2",
