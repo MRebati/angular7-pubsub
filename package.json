@@ -1,6 +1,6 @@
 {
   "name": "angular2-pubsub",
-  "version": "1.1.2",
+  "version": "2.0.0",
   "description": "Pub/Sub service for Angular 2",
   "main": "./umd/angular2-pubsub.js",
   "module": "./esm/src/index.js",
@@ -24,7 +24,8 @@
   ],
   "author": {
     "name": "Semih KEŞKEK",
-    "email": "keskeksmh@gmail.com"
+    "email": "keskeksmh@gmail.com",
+	"url": "http://github.com/sqlProvider"
   },
   "contributors": [
     {

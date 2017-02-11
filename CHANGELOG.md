@@ -1,5 +1,6 @@
-## v1.1.2
-Added unit tests for the service and project restructure updated to use the benefits of webpack and bundling.
+## v2.0.0
+ - PubSubService moved into PubSubModule.
+ - Added unit tests for the service and project restructure updated to use the benefits of webpack and bundling.
 
 ## v1.1.1
 Recovery fix and added interfaces.

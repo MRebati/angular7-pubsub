@@ -2,11 +2,6 @@
 
 A simple publisher/subscriber service. 
 
-## Contributers
-
-- [Semih KEŞKEK](http://github.com/sqlProvider)
-- [Mert SUSUR](http://github.com/msusur)
-
 ## Usage
  - Import service in your codes or download via npm or bower.
 
@@ -117,3 +112,7 @@ npm run build
 ```
 Commands above will generate the ready to use bundles under the `./dist` folder.
 
+## Contributers
+
+- [Semih KEŞKEK](http://github.com/sqlProvider)
+- [Mert SUSUR](http://github.com/msusur)
