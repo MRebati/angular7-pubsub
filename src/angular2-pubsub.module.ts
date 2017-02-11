@@ -4,9 +4,6 @@ import { ModuleWithProviders, NgModule } from '@angular/core';
 @NgModule({
   providers: [
     PubSubService
-  ],
-  exports: [
-    PubSubService
   ]
 })
 export class PubSubModule {
