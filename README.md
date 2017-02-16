@@ -2,6 +2,8 @@
 
 A simple publisher/subscriber service. 
 
+[![NPM](https://nodei.co/npm/angular2-pubsub.png?downloads=true&stars=true)](https://nodei.co/npm/angular2-pubsub/)
+
 ## Usage
  - Import service in your codes or download via npm or bower.
 
