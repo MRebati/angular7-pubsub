@@ -35,7 +35,7 @@ export class PubSubService implements IPubSubService {
 		if (!event) {
 			throw new Error(`[${ServiceName}] => Publish method must get event name.`);
 		} else if (!this.events[event]) {
-			throw new Error(`[${ServiceName}] => No recorded events found for ${event}.`);
+			return;
 		}
 
 		this.events[event].next(eventObject);

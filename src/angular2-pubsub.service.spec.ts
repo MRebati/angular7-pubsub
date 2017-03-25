@@ -33,8 +33,8 @@ describe('PubSubService', (): void => {
             expect(pubService.$pub.bind(undefined)).toThrow();
         });
 
-        it('should throw an error when event is not registered', (): void => {
-            expect(pubService.$pub.bind('not-registered')).toThrow();
+        it('should do nothing when an event is not registered', (): void => {
+            expect(() => pubService.$pub('not-registered')).not.toThrow();
         });
 
         it('should publish with parameters if the event is registered', (): void => {
