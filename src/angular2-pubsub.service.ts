@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { ReplaySubject } from 'rxjs/ReplaySubject';
 import { Observable } from 'rxjs/Observable';
 import { Subscription } from 'rxjs/Subscription';
 
@@ -21,7 +21,7 @@ export class PubSubService implements IPubSubService {
 		}
 
 		if (this.events[event] === undefined) {
-			this.events[event] = new BehaviorSubject<any>(0);
+			this.events[event] = new ReplaySubject<any>();
 		}
 
 		if (typeof callback !== 'function') {
