@@ -1,3 +1,7 @@
+## v2.0.1
+ - $pub command return undefined when no event subscribe.
+ - $sub method bug solved. RxJS Subscriber no longer call subscribe method on start.
+
 ## v2.0.0
  - PubSubService moved into PubSubModule.
  - Added unit tests for the service and project restructure updated to use the benefits of webpack and bundling.

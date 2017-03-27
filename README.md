@@ -80,12 +80,12 @@ export class NavigationComponent implements OnInit, OnDestroy {
 	ngOnInit() {
 		// usage of $sub(event: string): <Observable<any>>;
 		this.closeSidenavSub = this.pubsub.$sub('pleaseCloseSidenav').subscribe((from) => {
-			from ? this.sidenavOpened = false : void 0
+			this.sidenavOpened = false;
 		});
 
 		// usage of $sub(event: string, callback: (value: any) => void, error?: (error: any) => void, complete?: () => void): Subscription;
 		this.openSidenavSub = this.pubsub.$sub('pleaseOpenSidenav', (from) => {
-			from ? this.sidenavOpened = false : void 0
+			this.sidenavOpened = true;
 		});
 	}
 	ngOnDestroy() {
@@ -94,15 +94,7 @@ export class NavigationComponent implements OnInit, OnDestroy {
 	}
 ```
 
-	$sub method have one bug. RxJS Subscriber call subscribe method on start like Angular 1.x $scope.$watch.
-	
-```typescript
-this.closeSidenavSub = this.pubsub.$sub('pleaseCloseSidenav').subscribe((from) => {
-	console.log(form);
-});
-
-// => 0 
-```
+**See Changelog** ~~$sub method have one bug. RxJS Subscriber call subscribe method on start like Angular 1.x $scope.$watch.~~
 
 ## Build the source
 
@@ -113,8 +105,3 @@ npm test
 npm run build
 ```
 Commands above will generate the ready to use bundles under the `./dist` folder.
-
-## Contributers
-
-- [Semih KEŞKEK](http://github.com/sqlProvider)
-- [Mert SUSUR](http://github.com/msusur)
