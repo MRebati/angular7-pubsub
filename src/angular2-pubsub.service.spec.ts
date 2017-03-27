@@ -12,7 +12,7 @@ describe('PubSubService', (): void => {
 
     describe('$sub', (): void => {
         it('should throw an error when event is falsy', (): void => {
-            expect(pubService.$sub.bind(undefined)).toThrow();
+            expect(() => pubService.$sub(undefined)).toThrow();
         });
 
         it('should return an observable when there is no callback', (): void => {
@@ -30,11 +30,11 @@ describe('PubSubService', (): void => {
 
     describe('$pub', (): void => {
         it('should throw an error when event is falsy', (): void => {
-            expect(pubService.$pub.bind(undefined)).toThrow();
+            expect(() => pubService.$pub(undefined)).toThrow();
         });
 
-        it('should throw an error when event is not registered', (): void => {
-            expect(pubService.$pub.bind('not-registered')).toThrow();
+        it('should do nothing when an event is not registered', (): void => {
+            expect(() => pubService.$pub('not-registered')).not.toThrow();
         });
 
         it('should publish with parameters if the event is registered', (): void => {
