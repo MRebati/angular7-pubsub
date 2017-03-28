@@ -16,7 +16,7 @@
     "build-angular": "ngc -p tsconfig-ngc.json",
     "copy-package-info": "cp ./package.json ./dist/package.json && cp ./.npmignore ./dist/.npmignore && cp ./README.md ./dist/README.md",
     "build": "npm run clean && npm run build-umd && npm run build-angular && npm run copy-package-info",
-    "publish": "npm run build && ./publish.sh"
+    "publish": "./publish.sh"
   },
   "keywords": [
     "Angular2",
