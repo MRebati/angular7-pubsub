@@ -1,3 +1,6 @@
+## Next v4.0.0
+ - Only version changed for anyone using Angular 4.0.0
+
 ## v2.0.1
  - $pub command return undefined when no event subscribe.
  - $sub method bug solved. RxJS Subscriber no longer call subscribe method on start.

@@ -9,6 +9,10 @@ A simple publisher/subscriber service.
 
 `npm i --save angular2-pubsub` | `bower i --save angular2-pubsub`
 
+	if you use Angular version 4.x.x plase install from npm with 'next' tag.
+
+`npm i --save angular2-pubsub@next`
+
  - Add module bundle to imports in your application.
 ```typescript
 ...
