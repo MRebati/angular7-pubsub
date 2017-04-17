@@ -1,6 +1,6 @@
 {
   "name": "angular2-pubsub",
-  "version": "2.0.2",
+  "version": "4.0.1",
   "description": "Pub/Sub service for Angular 2",
   "main": "./umd/angular2-pubsub.js",
   "module": "./esm/src/index.js",
