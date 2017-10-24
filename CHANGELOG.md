@@ -1,3 +1,6 @@
+## Next v4.0.1
+ - Fixed the issue that created multiple pubsub services (#7).
+
 ## Next v4.0.0
  - Only version changed for anyone using Angular 4.0.0
 
