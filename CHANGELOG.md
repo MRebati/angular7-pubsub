@@ -1,4 +1,4 @@
-## Next v4.0.1
+## Next v4.0.2
  - Fixed the issue that created multiple pubsub services (#7).
 
 ## Next v4.0.0
