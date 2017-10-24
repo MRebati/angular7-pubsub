@@ -1,7 +1,7 @@
 ## Next v4.0.0
  - Only version changed for anyone using Angular 4.0.0
 
-## v2.0.4
+## v2.0.5
  - Fixed the issue that created multiple pubsub services (#7).
 
 ## v2.0.1
