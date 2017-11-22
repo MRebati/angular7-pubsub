@@ -55,7 +55,7 @@ declare class PubSubService {
 }
 ```
 
-#### PubSubService.$pub(event: stirng, eventObject?: any): void
+#### PubSubService.$pub(event: string, eventObject?: any): void
 	
 Publish event to all subscriber.
 
@@ -70,7 +70,7 @@ export class OverlayComponent implements OnInit, OnDestroy {
 }
 ```
 
-#### PubSubService.$sub(event: stirng): Observable<any>
+#### PubSubService.$sub(event: string): Observable<any>
 
 Subscribe to channel. 
 
