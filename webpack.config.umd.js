@@ -46,9 +46,6 @@ module.exports = {
   },
   module: {
     loaders: [
-      { test: /\.css$/, loader: 'raw', exclude: /node_modules/ },
-      { test: /\.css$/, loader: 'style!css?-minimize', exclude: /src/ },
-      { test: /\.html$/, loader: 'raw' },
       { test: /\.ts$/, loader: 'ts', query: { compilerOptions: { noEmit: false } } }
     ]
   },
@@ -59,11 +56,6 @@ module.exports = {
     library: 'angular2-pubsub'
   },
   plugins: [
-    new StyleLintPlugin({
-      syntax: 'scss',
-      context: 'scss',
-      failOnError: true
-    }),
     new CompressionPlugin({ regExp: /\.css$|\.html$|\.js$|\.map$/ })
   ],
   resolve: {
