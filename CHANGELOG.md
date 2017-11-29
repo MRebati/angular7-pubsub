@@ -1,5 +1,5 @@
-## v5.0.0
- - Fixed the issue that angular V5.x.x type error (#9).
+## v4.0.4
+ - Updated NPM Readme
 
 ## v4.0.3
  - Default version is now 4.x.x

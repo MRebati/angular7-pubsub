@@ -13,10 +13,6 @@ A simple publisher/subscriber service.
 
 `npm i --save angular2-pubsub@2.0.6`
 
-	if you use Angular version 5.x.x plase install from npm with 'next' tag.
-
-`npm i --save angular2-pubsub@next`
-
  - Add module bundle to imports in your application.
 ```typescript
 ...
