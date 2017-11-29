@@ -43,7 +43,7 @@ export class PubSubService implements IPubSubService {
 }
 
 export interface IPubSubService {
-	$pub(event: string, eventObject?: any);
+	$pub(event: string, eventObject?: any): void;
 	$sub(event: string): Observable<any>;
 	$sub(event: string, callback: (value: any) => void): Subscription;
 	$sub(event: string, callback: (value: any) => void, error: (error: any) => void): Subscription;
