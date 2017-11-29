@@ -7,9 +7,13 @@ A simple publisher/subscriber service.
 ## Usage
  - Import service in your codes or download via npm or bower.
 
-`npm i --save angular2-pubsub` | `bower i --save angular2-pubsub`
+`npm i --save angular2-pubsub`
 
-	if you use Angular version 4.x.x plase install from npm with 'next' tag.
+	if you use Angular version 2.x.x plase install from npm with '2.0.6' tag.
+
+`npm i --save angular2-pubsub@2.0.6`
+
+	if you use Angular version 5.x.x plase install from npm with 'next' tag.
 
 `npm i --save angular2-pubsub@next`
 
