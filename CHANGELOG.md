@@ -1,12 +1,18 @@
+## v5.0.0
+ - Fixed the issue that angular V5.x.x type error (#9).
+
 ## v4.0.3
  - Default version is now 4.x.x
- - Fixed the issue that angular V5.x.x type error (#9).
+ - Fixed type error
 
 ## Next v4.0.2
  - Fixed the issue that created multiple pubsub services (#7).
 
 ## Next v4.0.0
  - Only version changed for anyone using Angular 4.0.0
+
+## v2.0.6
+ - Fixed type error.
 
 ## v2.0.5
  - Fixed the issue that created multiple pubsub services (#7).
