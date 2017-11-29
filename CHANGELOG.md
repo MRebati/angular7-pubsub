@@ -1,4 +1,5 @@
 ## v4.0.3
+ - Default version is now 4.x.x
  - Fixed the issue that angular V5.x.x type error (#9).
 
 ## Next v4.0.2
