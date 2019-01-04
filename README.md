@@ -9,9 +9,7 @@ A simple publisher/subscriber service.
 
 `npm i --save ngx-pubsub`
 
-	if you use Angular version 2.x.x plase install from npm with '2.0.6' tag.
 
-`npm i --save ngx-pubsub@2.0.6`
 
  - Add module bundle to imports in your application.
 ```typescript
