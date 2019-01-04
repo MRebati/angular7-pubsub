@@ -1,2 +1,2 @@
-export * from './angular2-pubsub.service';
-export * from './angular2-pubsub.module';
+export * from './ngx-pubsub.service';
+export * from './ngx-pubsub.module';

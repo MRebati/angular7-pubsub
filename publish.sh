@@ -3,6 +3,6 @@
 # Build project
 npm run build
 
-echo "====== PUBLISHING: angular2-pubusb ====="
+echo "====== PUBLISHING: ngx-pubsub ====="
 npm publish ./dist --access public
-echo "====== PUBLISHED: angular2-pubusb ====="
+echo "====== PUBLISHED: ngx-pubsub ====="

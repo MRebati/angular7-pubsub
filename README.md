@@ -2,22 +2,22 @@
 
 A simple publisher/subscriber service. 
 
-[![NPM](https://nodei.co/npm/angular2-pubsub.png?downloads=true&stars=true)](https://nodei.co/npm/angular2-pubsub/)
+[![NPM](https://nodei.co/npm/ngx-pubsub.png?downloads=true&stars=true)](https://nodei.co/npm/ngx-pubsub/)
 
 ## Usage
  - Import service in your codes or download via npm or bower.
 
-`npm i --save angular2-pubsub`
+`npm i --save ngx-pubsub`
 
 	if you use Angular version 2.x.x plase install from npm with '2.0.6' tag.
 
-`npm i --save angular2-pubsub@2.0.6`
+`npm i --save ngx-pubsub@2.0.6`
 
  - Add module bundle to imports in your application.
 ```typescript
 ...
 
-import { PubSubModule } from 'angular2-pubsub'; // <= HERE
+import { PubSubModule } from 'ngx-pubsub'; // <= HERE
 
 @NgModule({
 declarations: [

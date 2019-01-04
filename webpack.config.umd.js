@@ -1,12 +1,6 @@
 const path = require('path');
 // Webpack and its plugins
-const CommonsChunkPlugin = require('webpack/lib/optimize/CommonsChunkPlugin');
 const CompressionPlugin = require('compression-webpack-plugin');
-const DedupePlugin = require('webpack/lib/optimize/DedupePlugin');
-const DefinePlugin = require('webpack/lib/DefinePlugin');
-const UglifyJsPlugin = require('webpack/lib/optimize/UglifyJsPlugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 const ENV = process.env.NODE_ENV = 'production';
 
@@ -18,6 +12,7 @@ module.exports = {
   entry: {
     'main': './src/index.ts'
   },
+  mode: 'production',
   externals: {
     '@angular/core': {
       root: ['ng', 'core'],
@@ -45,21 +40,21 @@ module.exports = {
     }
   },
   module: {
-    loaders: [
-      { test: /\.ts$/, loader: 'ts', query: { compilerOptions: { noEmit: false } } }
+    rules: [
+      { test: /\.ts$/, loader: 'ts-loader', query: { compilerOptions: { noEmit: false } } }
     ]
   },
   output: {
-    path: './dist/umd',
-    filename: 'angular2-pubsub.js',
+    path: path.resolve(__dirname, 'dist/umd'),
+    filename: 'ngx-pubsub.js',
     libraryTarget: 'umd',
-    library: 'angular2-pubsub'
+    library: 'ngx-pubsub'
   },
   plugins: [
-    new CompressionPlugin({ regExp: /\.css$|\.html$|\.js$|\.map$/ })
+    new CompressionPlugin({test: /\.css$|\.html$|\.js$|\.map$/ })
   ],
   resolve: {
-    extensions: ['', '.ts', '.js'],
+    extensions: ['.ts', '.js'],
     modules: [path.resolve(__dirname, 'node_modules')]
   }
 };

@@ -1,6 +1,6 @@
 /* tslint:disable:no-unused-variable */
 
-import { PubSubService } from './angular2-pubsub.service';
+import { PubSubService } from './ngx-pubsub.service';
 import { Observable, Subscriber } from 'rxjs';
 
 describe('PubSubService', (): void => {

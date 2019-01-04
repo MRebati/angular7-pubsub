@@ -3,7 +3,7 @@ import { ReplaySubject } from 'rxjs/ReplaySubject';
 import { Observable } from 'rxjs/Observable';
 import { Subscription } from 'rxjs/Subscription';
 
-const ServiceName: string = "PubSub Service";
+const ServiceName: string = 'PubSub Service';
 
 @Injectable()
 export class PubSubService implements IPubSubService {
@@ -12,7 +12,7 @@ export class PubSubService implements IPubSubService {
 	constructor() { }
 
 	public $sub(event: string): Observable<any>;
-	public $sub(event: string, callback: (value: any) => void): Subscription;	
+	public $sub(event: string, callback: (value: any) => void): Subscription;
 	public $sub(event: string, callback: (value: any) => void, error: (error: any) => void): Subscription;
 	public $sub(event: string, callback: (value: any) => void, error: (error: any) => void, complete: () => void): Subscription;
 	public $sub(event: string, callback?: (value: any) => void, error?: (error: any) => void, complete?: () => void) {
