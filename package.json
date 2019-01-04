@@ -1,6 +1,6 @@
 {
   "name": "angular7-pubsub",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Pub/Sub service for Angular 7 and up",
   "main": "./umd/angular7-pubsub.js",
   "module": "./esm/src/index.js",

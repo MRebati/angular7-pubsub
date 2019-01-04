@@ -8,7 +8,8 @@ All credit goes to the owner and contributers of angular-pubsub repo.
 
 [![NPM](https://nodei.co/npm/angular7-pubsub.png?downloads=true&stars=true)](https://nodei.co/npm/angular7-pubsub/)
 
- ##Usage
+## Usage
+
 - Import service in your codes or download via npm or bower.
 
 `npm i --save angular7-pubsub`
