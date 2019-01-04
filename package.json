@@ -1,13 +1,13 @@
 {
-  "name": "ngx-pubsub",
+  "name": "angular7-pubsub",
   "version": "1.0.0",
   "description": "Pub/Sub service for Angular 7 and up",
-  "main": "./umd/ngx-pubsub.js",
+  "main": "./umd/angular7-pubsub.js",
   "module": "./esm/src/index.js",
   "typings": "./esm/src/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mrebati/ngx-pubsub.git"
+    "url": "git+https://github.com/mrebati/angular7-pubsub.git"
   },
   "scripts": {
     "test": "karma start",
@@ -46,9 +46,9 @@
   ],
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mrebati/ngx-pubsub/issues"
+    "url": "https://github.com/mrebati/angular7-pubsub/issues"
   },
-  "homepage": "https://github.com/mrebati/ngx-pubsub#readme",
+  "homepage": "https://github.com/mrebati/angular7-pubsub#readme",
   "dependencies": {
     "@angular/common": "^7.1.4",
     "@angular/compiler": "^7.1.4",
