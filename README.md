@@ -82,8 +82,8 @@ etc.
 
 ```typescript
 export class NavigationComponent implements OnInit, OnDestroy {
-    sideanvSub: any;
-
+    closeSidenavSub: Subscription;
+    openSidenavSub: Subscription;
     constructor(private pubsub: EventDispatcherService) { }
 
     ngOnInit() {
