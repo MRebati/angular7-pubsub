@@ -1,7 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ReplaySubject } from 'rxjs/ReplaySubject';
-import { Observable } from 'rxjs/Observable';
-import { Subscription } from 'rxjs/Subscription';
+import { ReplaySubject, Observable, Subscription } from 'rxjs';
 
 const ServiceName: string = 'PubSub Service';
 
