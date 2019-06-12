@@ -11,9 +11,8 @@
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
-      "tempo-common": [
-        "./src/index"
-      ]
+      "tempo-common": ["./src/index"],
+      "@angular/*": ["./node_modules/@angular/*"]
     }
   },
   "compileOnSave": false
