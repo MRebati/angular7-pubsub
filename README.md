@@ -1,4 +1,4 @@
-# Pub/Sub Service for Angular 7
+# Pub/Sub Service for Angular 7 abd above
 
 A simple publisher/subscriber service.
 This repository is forked from angular-pubsub and 
