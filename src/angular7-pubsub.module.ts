@@ -7,7 +7,7 @@ import { ModuleWithProviders, NgModule } from '@angular/core';
  */
 @NgModule()
 export class PubSubModule {
-  public static forRoot(): ModuleWithProviders {
+  public static forRoot(): ModuleWithProviders<PubSubModule> {
     return {
       ngModule: PubSubModule,
       providers: [

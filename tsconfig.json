@@ -1,19 +1,29 @@
 {
   "compilerOptions": {
-    "target": "ES5",
-    "module": "commonjs",
+    "baseUrl": "./",
+    "target": "ES2022",
+    "module": "ES2022",
     "moduleResolution": "node",
+    "declaration": true,
     "sourceMap": true,
+    "inlineSources": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "removeComments": false,
-    "noImplicitAny": false,
-    "allowSyntheticDefaultImports": true,
-    "baseUrl": ".",
-    "paths": {
-      "tempo-common": ["./src/index"],
-      "@angular/*": ["./node_modules/@angular/*"]
-    }
+    "importHelpers": true,
+    "types": ["node", "jasmine"],
+    "lib": ["dom", "es2022"],
+    "skipLibCheck": true,
+    "strict": true
   },
-  "compileOnSave": false
+  "angularCompilerOptions": {
+    "enableIvy": true,
+    "compilationMode": "partial",
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+  },
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
 }
