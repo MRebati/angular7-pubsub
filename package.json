@@ -48,13 +48,13 @@
   },
   "homepage": "https://github.com/mrebati/angular7-pubsub#readme",
   "peerDependencies": {
-    "@angular/common": "^17.0.0",
+    "@angular/common": "^19.2.16",
     "@angular/core": "^17.0.0",
     "rxjs": "^7.8.1"
   },
   "devDependencies": {
     "@angular/cli": "^17.0.0",
-    "@angular/common": "^17.0.0",
+    "@angular/common": "^19.2.16",
     "@angular/compiler": "^17.0.0",
     "@angular/compiler-cli": "^17.0.0",
     "@angular/core": "^17.0.0",
